@@ -10,6 +10,8 @@ set(CMAKE_AUTOUIC ON)
 
 set(CMAKE_PREFIX_PATH "C:/Qt/6.9.3/mingw_64")
 
+set_source_files_properties(appicon.rc PROPERTIES LANGUAGE RC)
+
 find_package(Qt6 REQUIRED COMPONENTS
         Core
         Gui
@@ -18,14 +20,15 @@ find_package(Qt6 REQUIRED COMPONENTS
         OpenGLWidgets)
 
 
-add_executable(Colored_squares
+add_executable(Colored_squares WIN32
         main.cpp
         main_window.cpp
         main_window.h
         main_window.ui
         view.cpp
-        view.h)
-
+        view.h
+        resources.qrc
+        appicon.rc)
 
 target_include_directories(Colored_squares PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
