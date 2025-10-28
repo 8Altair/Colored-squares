@@ -3,6 +3,10 @@
 #include <QApplication> // Qt application runtime (event loop, rendering integration)
 #include <QSurfaceFormat>   // Request an OpenGL context format (version/profile/buffers)
 
+#include <QIcon>
+#include <qDebug>
+#include <QDir>
+
 
 int main(int argc, char *argv[])    // Standard Qt/desktop app entry point
 {
@@ -16,7 +20,9 @@ int main(int argc, char *argv[])    // Standard Qt/desktop app entry point
 
     QApplication::setAttribute(Qt::AA_UseDesktopOpenGL);    // Force desktop OpenGL
     QApplication app(argc, argv);   // Construct the Qt application (now picks up the default GL format)
+    QApplication::setWindowIcon(QIcon(":/icons/Icon/Icon.png"));
     MainWindow w;   // Create main window
+    w.setWindowIcon(QIcon(":/icons/Icon/Icon.png"));
     w.resize(1200, 700);    // Initial window size (pixels)
     w.show();   // Show the window (triggers widget creation and, later, GL context creation)
     return QApplication::exec();    // Enter Qt’s event loop (blocks until the app quits)
