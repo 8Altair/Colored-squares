@@ -4,8 +4,6 @@
 #include <QSurfaceFormat>   // Request an OpenGL context format (version/profile/buffers)
 
 #include <QIcon>
-#include <qDebug>
-#include <QDir>
 
 
 int main(int argc, char *argv[])    // Standard Qt/desktop app entry point
