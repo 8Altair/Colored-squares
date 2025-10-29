@@ -95,7 +95,7 @@ Before building, ensure the following dependencies are installed:
       GIT_TAG master)
   FetchContent_MakeAvailable(glm)
   ```
-- On Windows, post-build commands copy the required **Qt DLLs** and **platform plugins** into the build directory, so the executable can run standalone.
+- In `add_executable`, there is "WIN32" that will disable the default console in both IDE and .exe. If removed, it will re-enable it.
 
 ### Deployment Notes
 To ensure full runtime compatibility, you can also use:
