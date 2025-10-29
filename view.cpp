@@ -146,7 +146,8 @@ void View::setup_shaders()
     static auto vertex_shader_source = R"(#version 450 core
     layout(location = 0) in vec3 position;
     uniform mat4 mvp;
-    void main() {
+    void main()
+    {
         gl_Position = mvp * vec4(position, 1.0);
     }
     )";
@@ -155,7 +156,8 @@ void View::setup_shaders()
     static auto fragment_shader_source = R"(#version 450 core
     uniform vec4 color;
     out vec4 FragColor;
-    void main() {
+    void main()
+    {
         FragColor = color;
     }
     )";
