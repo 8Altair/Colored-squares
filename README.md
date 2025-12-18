@@ -1,13 +1,13 @@
 # Colored Squares
 
 ## Overview
-**Colored Squares** is a cross-platform Qt 6 demonstration app that illustrates how to integrate modern **OpenGL (4.6 Core Profile)** into a **Qt Widgets** application.  
+**Colored Squares** is a cross-platform Qt 6 demonstration app that illustrates how to integrate modern **OpenGL (4.5 Core Profile)** into a **Qt Widgets** application.  
 The program opens a main window, requests an OpenGL 4.6 core context, and uses a custom `QOpenGLWidget` subclass (`View`) to render a simple 2D scene — a ground strip and a **pyramid of brightly coloured squares** stacked in layers.
 
 ---
 
 ## Features
-- Uses **OpenGL 4.6 Core Profile** (no deprecated fixed-pipeline functions)
+- Uses **OpenGL 4.5 Core Profile** (no deprecated fixed-pipeline functions)
 - Draws a **pyramid of colored squares** using modern buffer/shader APIs
 - Includes an **orthographic projection** that adapts to window resizing
 - Automatically sets up **Qt application icons** for window, taskbar, and executable
